@@ -42,14 +42,34 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav
+
+const nav = document.querySelector('nav')
+
 const navItems = document.querySelectorAll('nav a')
 let i = 1
 navItems.forEach(item => {
   item.setAttribute('class', `nav-item-${i}`)
   item.setAttribute('href', '#')
   item.innerText = siteContent.nav[`nav-item-${i}`]
+  item.style.color = 'green'
   i++
 })
+
+const shopNavItem = document.createElement('a')
+shopNavItem.innerText = 'Shop'
+shopNavItem.classList.add('green')
+nav.appendChild(shopNavItem)
+
+const teamNavItem = document.createElement('a')
+teamNavItem.innerText = 'Team'
+teamNavItem.classList.add('green')
+nav.prepend(teamNavItem)
+
+
+
+
+
+
 
 // cta
 const ctaH1 = document.querySelector('h1')
@@ -93,6 +113,8 @@ contact[0].children[0].innerText = siteContent.contact["contact-h4"]
 contact[0].children[1].innerText = siteContent.contact["address"]
 contact[0].children[2].innerText = siteContent.contact["phone"]
 contact[0].children[3].innerText = siteContent.contact["email"]
+
+// footer
 
 const footer = document.querySelector('footer p')
 footer.innerText = siteContent.footer.copyright
