@@ -65,12 +65,6 @@ teamNavItem.innerText = 'Team'
 teamNavItem.classList.add('green')
 nav.prepend(teamNavItem)
 
-
-
-
-
-
-
 // cta
 const ctaH1 = document.querySelector('h1')
 ctaH1.innerText = siteContent.cta['h1']
